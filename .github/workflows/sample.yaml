@@ -2,11 +2,7 @@ name: Sample Github workflow
 on: [push]
 jobs:
  run-command: 
-   runs-on: ubuntu-latest
+   runs-on: [self-hosted, windows]
    steps: 
      - name: echo hello world
        run: eecho "Hello World!"
-     - name: multi-line script
-       run: |
-         node -v
-         npm -v
